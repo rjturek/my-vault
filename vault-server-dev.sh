@@ -24,6 +24,8 @@ start() {
     else 
         echo "Starting vault in dev mode ..."
         vault server -dev > $START_INFO_FILE
+        sleep 3
+        show_current
     fi
 }
 
