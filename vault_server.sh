@@ -13,7 +13,10 @@ usage() {
   echo "       Other instance names have a corresponding directory containing configuration, etc."
 }
 
-show_current() {
+show() {
+  echo " "
+  echo " "
+  
   PS_RESULT=$(ps -ef | grep 'vault' | grep 'server' | grep '\-dev' | grep -v $0)
   if [ $? -ne 0 ]; then
     echo "Server not running in dev mode."
